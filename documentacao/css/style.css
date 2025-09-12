@@ -1,0 +1,72 @@
+ 
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:#0e4173; /* azul claro */
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1966ad; /* azul primary quando passa o mouse */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0e4173 transparent; /* azul claro */
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #245d94; /* azul accent quando ativo */
+}/* Example styling for navigation icons */
+
+ 
+a {
+  color: #0e4173;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  text-decoration: underline;
+}
+ 
+.nav-logo {
+  height: 60px;      /* altura desejada */
+  max-width: 200px;  /* largura máxima desejada */
+  object-fit: contain;
+}
+
+.navbar button {
+  font-weight: bold !important;
+  color : #0e4173 !important;
+  border: 2px solid #0e4173 !important;
+  background-color: transparent !important;
+}
+
+h1, h2 {
+  font-weight: bold;
+  position: relative; /* chave pra controlar o ::after */
+  display: inline-block; /* faz o título encolher só ao texto */
+  padding-bottom: 6px;   /* espaço pra barra não invadir o texto */
+}
+
+h1::after, h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 80px; /* muda o tamanho se quiser */
+  background: linear-gradient(90deg, #0e4173, #1966ad, #2d8ad4);
+  border-radius: 2px;
+}
