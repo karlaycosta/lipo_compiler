@@ -123,21 +123,12 @@ class VM {
 <<<<<<< HEAD
       
       // Callback para debugger interativo
-      if (onInstructionExecute != null) {
-        onInstructionExecute!(_ip - 1, instruction.opcode, List.from(_stack), Map.from(_globals));
-      }
+      
       
 =======
 
       // Callback para debugger interativo
-      if (onInstructionExecute != null) {
-        onInstructionExecute!(
-          _ip - 1,
-          instruction.opcode,
-          List.from(_stack),
-          Map.from(_globals),
-        );
-      }
+      
 
 >>>>>>> origin/dev
       switch (instruction.opcode) {
@@ -367,38 +358,23 @@ class VM {
         case OpCode.listAdd:
           final value = _pop();
           final list = _pop();
-          if (list is List) {
-            list.add(value);
-            _push(null); // Método não retorna valor
-          } else {
-            _runtimeError("Método 'adicionar' só pode ser chamado em listas.");
-            return InterpretResult.runtimeError;
-          }
-          break;
+          list.add(value);
+          _push(null); // Método não retorna valor
+                  break;
         case OpCode.listRemove:
           final list = _pop();
-          if (list is List) {
-            if (list.isNotEmpty) {
-              final removedValue = list.removeLast();
-              _push(removedValue);
-            } else {
-              _runtimeError("Não é possível remover elemento de lista vazia.");
-              return InterpretResult.runtimeError;
-            }
+          if (list.isNotEmpty) {
+            final removedValue = list.removeLast();
+            _push(removedValue);
           } else {
-            _runtimeError("Método 'remover' só pode ser chamado em listas.");
+            _runtimeError("Não é possível remover elemento de lista vazia.");
             return InterpretResult.runtimeError;
           }
-          break;
+                  break;
         case OpCode.listEmpty:
           final list = _pop();
-          if (list is List) {
-            _push(list.isEmpty);
-          } else {
-            _runtimeError("Método 'vazio' só pode ser chamado em listas.");
-            return InterpretResult.runtimeError;
-          }
-          break;
+          _push(list.isEmpty);
+                  break;
         case OpCode.createList:
           final elementCount = instruction.operand!;
           final list = <Object?>[];

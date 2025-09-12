@@ -1,0 +1,22 @@
+---
+title: "Funções Recursivas"
+---
+
+Funções recursivas são aquelas que **chamam a si mesmas** para resolver um problema em partes menores. Essa técnica é poderosa e muito usada em algoritmos que envolvem repetição com variação de estado.
+
+A ideia é dividir o problema em subproblemas cada vez menores até chegar a um caso base, que encerra a recursão.
+
+
+
+## Exemplo: Fatorial
+
+Considere a função abaixo:
+
+```lipo
+inteiro fatorial(inteiro n) {
+    se (n <= 1) {
+        retorne 1;
+    } senao {
+        retorne n * fatorial(n - 1);
+    }
+}
