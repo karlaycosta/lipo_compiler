@@ -1,0 +1,170 @@
+{
+
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "LiPo AI Docs",
+  "colors": {
+    "primary": "#1966ad",
+    "light": "#2d8ad4",
+    "dark": "#0e4173"
+  },
+  "favicon": "./lipo.svg",
+ 
+  
+ "navigation": {
+  "dropdowns": [
+    {
+      "dropdown": "Documentação",
+      "icon": "book",
+      "description": "Documentação do LiPo.",
+      "groups": [
+        {
+          "group": "Comece agora mesmo",
+          "pages": [
+            "pages/index",
+            "pages/inicio_rapido",
+            "pages/instalacao",
+            "pages/editor_online"
+          ]
+        },
+        {
+          "group": "Essenciais",
+          "pages": [
+            "pages/essentials/estrutura_lexica",
+            "pages/essentials/identificadores",
+            "pages/essentials/palavras_reservadas",
+            "pages/essentials/tipos_dados",
+            "pages/essentials/conversao"
+          ]
+        },
+        {
+          "group": "Variáveis e Constantes",
+          "pages": [
+            "pages/variaveis_constantes/declaração_de_variaveis",
+            "pages/variaveis_constantes/declaração_de_constantes"
+          ]
+        },
+        {
+          "group": "Operadores",
+          "pages": [
+            "pages/operadores/operadores_aritmeticos",
+            "pages/operadores/operadores_comparacao",
+            "pages/operadores/operadores_logicos",
+            "pages/operadores/operador_atribuicao",
+            "pages/operadores/operadores_incremento_decremento",
+            "pages/operadores/operadores_tipode",
+            "pages/operadores/operadores_precedencia"
+          ]
+        },
+        {
+          "group": "Estruturas de Controle",
+          "pages": [
+            "pages/estruturas_de_controle/condicional",
+            "pages/estruturas_de_controle/condicional_ternaria",
+            "pages/estruturas_de_controle/loop_while",
+            "pages/estruturas_de_controle/loop_for",
+            "pages/estruturas_de_controle/loop_for_incremento",
+            "pages/estruturas_de_controle/loop_for_decremento",
+            "pages/estruturas_de_controle/loop_for_estiloC",
+            "pages/estruturas_de_controle/switch_case",
+            "pages/estruturas_de_controle/controle_loop",
+            "pages/estruturas_de_controle/break",
+            "pages/estruturas_de_controle/continue"
+          ]
+        },
+        {
+          "group": "Funções",
+          "pages": [
+            "pages/funcoes/funcao_vazia",
+            "pages/funcoes/funcao_retorno",
+            "pages/funcoes/funcao_recursiva",
+            "pages/funcoes/funcao_mista"
+          ]
+        },
+        {
+          "group": "Sistema de Imports",
+          "pages": [
+            "pages/sistema_imports/importacao_basico",
+            "pages/sistema_imports/importacao_alias",
+            "pages/sistema_imports/import_exemplos"
+          ]
+        },
+        {
+          "group": "Itens Gerais",
+          "pages": [
+            "pages/itens_geral/biblioteca",
+            "pages/itens_geral/comentarios"
+          ]
+        },
+        {
+          "group": "Gramatica Formal",
+          "pages": [
+            "pages/gramatica_formal/estrutura_geral_programa",
+            "pages/gramatica_formal/instrucoes_statements",
+            "pages/gramatica_formal/expressoes",
+            "pages/gramatica_formal/literais_tokens"
+          ]
+        },
+        {
+          "group": "Exemplos Práticos",
+          "pages": [
+            "pages/exemplos_praticos/exemplo_1_programa_basico",
+            "pages/exemplos_praticos/exemplo_2_estruturas_de_controle",
+            "pages/exemplos_praticos/exemplo_3_funcoes",
+            "pages/exemplos_praticos/exemplo_4_switch_case",
+            "pages/exemplos_praticos/exemplo_5_imports",
+            "pages/exemplos_praticos/exemplo_6_recursividade"
+          ]
+        }
+      ]
+    },
+
+      {
+        "dropdown": "Importante",
+        "icon": "heart",
+        "description": "como_contribuir, licenca e sobre",
+        "pages": [
+          "pages/importante/como_contribuir",
+          "pages/importante/licenca",
+          "pages/importante/sobre"
+        ]
+        
+      }
+        
+
+    ]
+  },
+     
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Editor LiPoLang Online",
+      "href": "https://editor.lipolang.dev"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/karlaycosta/lipo_compiler"
+    },
+
+    
+    "links": [
+      {
+        "header": "Navbar",
+        "items": [
+          { "label": "Home", "href": "https://whimsical-cajeta-1190cd.netlify.app" },
+          { "label": "Ajuda", "href": "https://whimsical-cajeta-1190cd.netlify.app/ajuda" },
+          { "label": "Sobre nós", "href": "https://teste-94e5b8ab.mintlify.app" }
+        ]
+      },
+      {
+        "header": "Compilador online LiPo",
+        "items": [{ "label": "Compilador Online", "href": "https://editor.lipolang.dev" }]
+      }
+    ]
+  }
+}

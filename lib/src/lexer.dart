@@ -102,7 +102,15 @@ class Lexer {
     'real': TokenType.real, // Tipo de dados real/float
     'texto': TokenType.texto, // Tipo de dados string
     'logico': TokenType.logico, // Tipo de dados boolean
+<<<<<<< HEAD
+<<<<<<< HEAD
     'vazio': TokenType.estaVazio, // Método vazio() - sobrescreve o tipo void
+=======
+    'vazio': TokenType.vazio, // Tipo de retorno void para funções
+>>>>>>> origin/dev
+=======
+    'vazio': TokenType.estaVazio, // Método vazio() - sobrescreve o tipo void
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     // Sistema de listas
     'lista': TokenType.lista, // Tipo de dados lista
     'tamanho': TokenType.tamanho, // Método tamanho()

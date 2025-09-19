@@ -1,0 +1,28 @@
+---
+title: "Switch/Case (escolha/caso)"
+---
+
+A estrutura `escolha/caso` é usada para **executar diferentes blocos de código** com base no **valor de uma expressão**.  
+Ela é ideal quando há **múltiplas possibilidades** e queremos tratar cada uma de forma específica.
+
+## Exemplo: Dias da semana
+
+```lipo
+inteiro dia = 3;
+
+escolha (dia) {
+    caso 1:
+        imprima "Segunda-feira";
+        parar;
+
+    caso 2:
+        imprima "Terça-feira";
+        parar;
+
+    caso 3:
+        imprima "Quarta-feira";
+        parar;
+
+    contrario:
+        imprima "Outro dia";
+}

@@ -1,0 +1,50 @@
+---
+title: "Expressões"
+---
+
+As expressões são os **blocos fundamentais de lógica** em qualquer linguagem de programação.  
+Elas representam **valores computáveis**, que podem ser atribuídos, comparados, manipulados ou avaliados.
+
+Nesta linguagem, a estrutura de uma expressão segue uma **hierarquia clara**, onde cada nível define o tipo de operação permitida e sua precedência.
+
+## Hierarquia das expressões
+
+- **`expression` → `assignment`**  
+  Toda expressão começa com uma **atribuição**, que pode ser simples (`=`) ou composta (`+=`, `-=`, etc.).
+
+- **`assignment` → `ternary`**  
+  Permite atribuir valores com base em uma **condição ternária**: `condição ? valor1 : valor2`.
+
+- **`ternary` → `logical_or`**  
+  Avalia expressões com o operador lógico **OU** (`ou`).
+
+- **`logical_or` → `logical_and`**  
+  Avalia expressões com o operador lógico **E** (`e`).
+
+- **`logical_and` → `equality`**  
+  Compara valores com operadores de **igualdade** (`==`) e **diferença** (`!=`).
+
+- **`equality` → `comparison`**  
+  Realiza **comparações relacionais**: maior, menor, maior ou igual, etc.
+
+- **`comparison` → `term`**  
+  Executa operações de **soma e subtração**.
+
+- **`term` → `factor`**  
+  Executa operações de **multiplicação, divisão e módulo**.
+
+- **`factor` → `unary`**  
+  Aplica **operadores unários** como negação (`!`), negativo (`-`), tipo (`tipode`), incremento (`++`) e decremento (`--`).
+
+- **`unary` → `postfix`**  
+  Permite **operações pós-expressão**, como `i++`.
+
+- **`postfix` → `call`**  
+  Executa **chamadas de função** ou **acesso a membros** (`objeto.metodo()`).
+
+- **`call` → `primary`**  
+  Representa os elementos mais básicos: **literais**, **identificadores** ou **expressões entre parênteses**.
+
+<Tip>Essa hierarquia garante que expressões sejam avaliadas corretamente, respeitando a ordem de precedência dos operadores.</Tip>
+
+---

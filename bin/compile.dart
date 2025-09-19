@@ -16,6 +16,66 @@ import 'package:minidart_compiler/src/dap_debugger.dart';
 final errorReporter = ErrorReporter();
 
 void main(List<String> arguments) {
+<<<<<<< HEAD
+  final parser =
+      ArgParser()
+        ..addFlag(
+          'version',
+          abbr: 'v',
+          negatable: false,
+          help: 'Mostra a versão do compilador',
+        )
+        ..addFlag(
+          'ast-only',
+          abbr: 'a',
+          negatable: false,
+          help: 'Gera apenas a AST em Graphviz (não executa o código)',
+        )
+        ..addFlag(
+          'bytecode',
+          abbr: 'b',
+          negatable: false,
+          help: 'Mostra o bytecode gerado durante a compilação',
+        )
+        ..addFlag(
+          'debug-interactive',
+          abbr: 'i',
+          negatable: false,
+          help: 'Inicia o debugger interativo com breakpoints e step-by-step',
+        )
+        ..addFlag(
+          'debug-dap',
+          negatable: false,
+          help:
+              'Inicia o modo DAP (Debug Adapter Protocol) para integração VS Code',
+        )
+        ..addFlag(
+          'debug-tokens',
+          negatable: false,
+          help: 'Mostra todos os tokens identificados durante a análise léxica',
+        )
+        ..addFlag(
+          'debug-parser',
+          negatable: false,
+          help: 'Mostra detalhes da construção da AST durante o parsing',
+        )
+        ..addFlag(
+          'debug-semantic',
+          negatable: false,
+          help: 'Exibe informações detalhadas da análise semântica e escopo',
+        )
+        ..addFlag(
+          'debug-vm',
+          negatable: false,
+          help: 'Mostra execução passo-a-passo da VM com stack e instruções',
+        )
+        ..addFlag(
+          'debug-all',
+          negatable: false,
+          help:
+              'Ativa todos os modos de debug (tokens + parser + semantic + vm)',
+        );
+=======
   final parser = ArgParser()
     ..addFlag(
       'version',
@@ -72,6 +132,7 @@ void main(List<String> arguments) {
       negatable: false,
       help: 'Ativa todos os modos de debug (tokens + parser + semantic + vm)',
     );
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
 
   ArgResults argResults;
   try {

@@ -66,7 +66,15 @@ class DAPDebugger {
   /// Loop principal DAP
   void _dapLoop(BytecodeChunk chunk) {
     // Configurar listener para comandos stdin
+<<<<<<< HEAD
+<<<<<<< HEAD
     stdin.transform(utf8.decoder).transform(LineSplitter()).listen((line) {
+=======
+    stdin.transform(utf8.decoder).transform(const LineSplitter()).listen((line) {
+>>>>>>> origin/dev
+=======
+    stdin.transform(utf8.decoder).transform(LineSplitter()).listen((line) {
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
       if (line.startsWith('DAP:')) {
         try {
           final command = jsonDecode(line.substring(4));
@@ -108,7 +116,15 @@ class DAPDebugger {
         }
       } else {
         // Aguarda comandos quando pausado
+<<<<<<< HEAD
+<<<<<<< HEAD
         sleep(Duration(milliseconds: 10));
+=======
+        sleep(const Duration(milliseconds: 10));
+>>>>>>> origin/dev
+=======
+        sleep(Duration(milliseconds: 10));
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
       }
     }
   }

@@ -3,7 +3,7 @@
 // Imports no início do arquivo
 importar math;
 importar string;
-importar io;
+importar io;z
 
 // Programa principal
 programa calculadora_avancada {
