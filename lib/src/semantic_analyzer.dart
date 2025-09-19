@@ -544,6 +544,7 @@ class SemanticAnalyzer implements AstVisitor<void> {
     for (final param in stmt.params) {
       _declare(param.name);
 <<<<<<< HEAD
+<<<<<<< HEAD
       _currentScope.defineTyped(param.name, param.type.type.type);
 =======
       
@@ -560,6 +561,9 @@ class SemanticAnalyzer implements AstVisitor<void> {
       }
       
 >>>>>>> origin/dev
+=======
+      _currentScope.defineTyped(param.name, param.type.type.type);
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
       // Marca o parâmetro como inicializado (parâmetros sempre são válidos)
       _currentScope.assign(param.name);
     }
@@ -858,6 +862,7 @@ class SemanticAnalyzer implements AstVisitor<void> {
           return TokenType.real; // fallback para métodos desconhecidos
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     } else if (expr is CallExpr) {
       // Para chamadas de função, tenta obter o tipo de retorno da função
@@ -905,11 +910,14 @@ class SemanticAnalyzer implements AstVisitor<void> {
       // Para expressões agrupadas (parênteses), retorna o tipo da expressão interna
       return _inferExpressionType(expr.expression);
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     }
 
     return TokenType.real; // fallback
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   /// Extrai o tipo do elemento de um parâmetro de lista baseado no lexeme
@@ -936,6 +944,8 @@ class SemanticAnalyzer implements AstVisitor<void> {
   }
 
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   /// Verifica se dois tipos são compatíveis
   bool _areTypesCompatible(TokenType actual, TokenType expected) {
     // Tipos exatamente iguais
@@ -1024,6 +1034,7 @@ class SemanticAnalyzer implements AstVisitor<void> {
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Verificar se é um método de lista válido
     final methodName = expr.name.lexeme;
 =======
@@ -1049,6 +1060,10 @@ class SemanticAnalyzer implements AstVisitor<void> {
     
     // Verificar se é um método de lista válido
 >>>>>>> origin/dev
+=======
+    // Verificar se é um método de lista válido
+    final methodName = expr.name.lexeme;
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     if (!['tamanho', 'adicionar', 'remover', 'vazio'].contains(methodName)) {
       _errorReporter.error(expr.name.line, "Método '$methodName' não reconhecido.");
       return;
@@ -1079,6 +1094,7 @@ class SemanticAnalyzer implements AstVisitor<void> {
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   /// Valida métodos de bibliotecas importadas
@@ -1189,6 +1205,8 @@ class SemanticAnalyzer implements AstVisitor<void> {
   }
 
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   // Funções auxiliares para declaração e definição de variáveis
   void _declare(Token name) {
     _currentScope.define(name);

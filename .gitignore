@@ -67,9 +67,15 @@ debug_*.mdart
 # Logs e outputs
 *.log
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.out
 # Local Netlify folder
 .netlify
 =======
 *.out
 >>>>>>> origin/dev
+=======
+*.out
+# Local Netlify folder
+.netlify
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)

@@ -28,6 +28,7 @@ include: package:lints/recommended.yaml
 # https://dart.dev/go/core-lints
 
 # For additional information about configuring this file, see
+<<<<<<< HEAD
 # https://dart.dev/guides/language/analysis-options
 =======
 include: package:lints/recommended.yaml
@@ -38,3 +39,6 @@ linter:
     prefer_const_literals_to_create_immutables: true
     prefer_const_declarations: true
 >>>>>>> origin/dev
+=======
+# https://dart.dev/guides/language/analysis-options
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)

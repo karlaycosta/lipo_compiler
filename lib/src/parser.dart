@@ -159,6 +159,9 @@ class Parser {
   /// 
   /// Reconhece e analisa declarações de listas homogêneas.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   /// Sintaxe: lista<tipo> nome = [elementos...];
   /// 
   /// **Exemplos:**
@@ -167,6 +170,7 @@ class Parser {
   /// - lista<real> valores = [1.5, 2.7, 3.14];
   /// - lista<logico> flags = [verdadeiro, falso];
   /// - lista<inteiro> vazia = [];
+<<<<<<< HEAD
 =======
   /// Sintaxe: lista`<tipo>` nome = [elementos...];
   /// 
@@ -177,6 +181,8 @@ class Parser {
   /// - lista`<logico>` flags = [verdadeiro, falso];
   /// - lista`<inteiro>` vazia = [];
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   Stmt _listDeclaration() {
     // Consumir '<'
     _consume(TokenType.less, "Esperado '<' após 'lista'.");
@@ -476,11 +482,15 @@ class Parser {
             _check(TokenType.adicionar) || 
             _check(TokenType.remover) ||
 <<<<<<< HEAD
+<<<<<<< HEAD
             _check(TokenType.estaVazio)) {
 =======
             _check(TokenType.estaVazio) ||
             _check(TokenType.vazio)) {
 >>>>>>> origin/dev
+=======
+            _check(TokenType.estaVazio)) {
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
           property = _advance();
         } else {
           throw _error(_peek(), "Esperado nome da propriedade ou método após '.'.");
@@ -550,6 +560,7 @@ class Parser {
       return _listLiteral();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
     // Verificar se o token atual é uma palavra reservada para dar erro mais específico
@@ -560,6 +571,8 @@ class Parser {
     }
     
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     throw _error(_peek(), "Expressão esperada.");
   }
 
@@ -617,10 +630,14 @@ class Parser {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   /// Parseia um tipo simples ou complexo (como lista<tipo>)
 =======
   /// Parseia um tipo simples ou complexo (como lista`<tipo>`)
 >>>>>>> origin/dev
+=======
+  /// Parseia um tipo simples ou complexo (como lista<tipo>)
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   TypeInfo _parseType() {
     if (_match([TokenType.lista])) {
       // Parsear tipo de lista: lista<tipo>

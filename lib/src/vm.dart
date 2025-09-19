@@ -48,6 +48,9 @@ class VM {
   late StandardLibrary _standardLibrary;
   bool _debugMode = false; // Modo debug da VM
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   
   // Callbacks para debugger interativo
   Function(int ip, OpCode opCode, List<dynamic> stack, Map<String, dynamic> globals)? onInstructionExecute;
@@ -88,6 +91,11 @@ class VM {
     _debugMode = enabled;
   }
 
+  /// Ativa ou desativa o modo debug da VM
+  void setDebugMode(bool enabled) {
+    _debugMode = enabled;
+  }
+
   InterpretResult interpret(BytecodeChunk chunk) {
     _chunk = chunk;
     _ip = 0;
@@ -112,14 +120,19 @@ class VM {
     while (true) {
       final instruction = _chunk.code[_ip++];
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 =======
 
 >>>>>>> origin/dev
+=======
+      
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
       // Debug: mostra instrução atual
       if (_debugMode) {
         _debugInstruction(instruction);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       // Callback para debugger interativo
@@ -131,6 +144,14 @@ class VM {
       
 
 >>>>>>> origin/dev
+=======
+      
+      // Callback para debugger interativo
+      if (onInstructionExecute != null) {
+        onInstructionExecute!(_ip - 1, instruction.opcode, List.from(_stack), Map.from(_globals));
+      }
+      
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
       switch (instruction.opcode) {
         case OpCode.pushConst:
           _push(_chunk.constants[instruction.operand!]);
@@ -298,11 +319,15 @@ class VM {
               _push(list[index]);
             } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
               _runtimeError("Índice $index fora do alcance da lista (tamanho: ${list.length}).");
               return InterpretResult.runtimeError;
             }
           } else {
             _runtimeError("Acesso por índice requer uma lista e um índice inteiro.");
+<<<<<<< HEAD
 =======
               _runtimeError(
                 "Índice $index fora do alcance da lista (tamanho: ${list.length}).",
@@ -314,6 +339,8 @@ class VM {
               "Acesso por índice requer uma lista e um índice inteiro.",
             );
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
             return InterpretResult.runtimeError;
           }
           break;
@@ -327,11 +354,15 @@ class VM {
               _push(value); // Retorna o valor atribuído
             } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
               _runtimeError("Índice $index fora do alcance da lista (tamanho: ${list.length}).");
               return InterpretResult.runtimeError;
             }
           } else {
             _runtimeError("Atribuição por índice requer uma lista e um índice inteiro.");
+<<<<<<< HEAD
 =======
               _runtimeError(
                 "Índice $index fora do alcance da lista (tamanho: ${list.length}).",
@@ -343,6 +374,8 @@ class VM {
               "Atribuição por índice requer uma lista e um índice inteiro.",
             );
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
             return InterpretResult.runtimeError;
           }
           break;
@@ -358,6 +391,7 @@ class VM {
         case OpCode.listAdd:
           final value = _pop();
           final list = _pop();
+<<<<<<< HEAD
           list.add(value);
           _push(null); // Método não retorna valor
                   break;
@@ -383,15 +417,57 @@ class VM {
 =======
 
 >>>>>>> origin/dev
+=======
+          if (list is List) {
+            list.add(value);
+            _push(null); // Método não retorna valor
+          } else {
+            _runtimeError("Método 'adicionar' só pode ser chamado em listas.");
+            return InterpretResult.runtimeError;
+          }
+          break;
+        case OpCode.listRemove:
+          final list = _pop();
+          if (list is List) {
+            if (list.isNotEmpty) {
+              final removedValue = list.removeLast();
+              _push(removedValue);
+            } else {
+              _runtimeError("Não é possível remover elemento de lista vazia.");
+              return InterpretResult.runtimeError;
+            }
+          } else {
+            _runtimeError("Método 'remover' só pode ser chamado em listas.");
+            return InterpretResult.runtimeError;
+          }
+          break;
+        case OpCode.listEmpty:
+          final list = _pop();
+          if (list is List) {
+            _push(list.isEmpty);
+          } else {
+            _runtimeError("Método 'vazio' só pode ser chamado em listas.");
+            return InterpretResult.runtimeError;
+          }
+          break;
+        case OpCode.createList:
+          final elementCount = instruction.operand!;
+          final list = <Object?>[];
+          
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
           // Retira elementos da pilha em ordem reversa (último empurrado primeiro)
           for (int i = 0; i < elementCount; i++) {
             list.insert(0, _pop());
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 =======
 
 >>>>>>> origin/dev
+=======
+          
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
           _push(list);
           break;
         case OpCode.return_:
@@ -665,6 +741,7 @@ class VM {
             // Resultado já está no topo da pilha
             final result = _pop();
             
+<<<<<<< HEAD
 =======
 
             // Resultado já está no topo da pilha
@@ -676,11 +753,16 @@ class VM {
             }
 
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
             // Callback para debugger
             if (onFunctionReturn != null) {
               onFunctionReturn!(frame.function.name, result);
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
             
             // Restaura contexto anterior
             _chunk = oldChunk;
@@ -870,6 +952,9 @@ class VM {
         }
         break;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
       case OpCode.return_:
         // No contexto principal (sem frames), return_ marca fim do programa
         if (_frames.isEmpty) {
@@ -880,6 +965,7 @@ class VM {
           _runtimeError("Return inesperado fora de contexto de função.");
         }
         break;
+<<<<<<< HEAD
 =======
       case OpCode.break_:
         // break_ é tratado durante a compilação com jumps - não deveria chegar aqui
@@ -976,6 +1062,8 @@ class VM {
         _push(list);
         break;
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
       default:
         _runtimeError("Operação não suportada: ${instruction.opcode}");
         break;
@@ -993,6 +1081,7 @@ class VM {
   void _debugInstruction(Instruction instruction) {
     // Mostra posição atual e instrução
 <<<<<<< HEAD
+<<<<<<< HEAD
     print('🔍 [VM] IP: ${_ip - 1} | ${instruction.opcode}${instruction.operand != null ? ' ${instruction.operand}' : ''}');
     
 =======
@@ -1001,6 +1090,10 @@ class VM {
     );
 
 >>>>>>> origin/dev
+=======
+    print('🔍 [VM] IP: ${_ip - 1} | ${instruction.opcode}${instruction.operand != null ? ' ${instruction.operand}' : ''}');
+    
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     // Mostra pilha atual
     stdout.write('    Stack: [');
     for (int i = 0; i < _stack.length; i++) {
@@ -1014,10 +1107,14 @@ class VM {
     }
     print(']');
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
 >>>>>>> origin/dev
+=======
+    
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     // Mostra globals relevantes (apenas se não vazio)
     if (_globals.isNotEmpty && _globals.length <= 5) {
       stdout.write('    Globals: {');
@@ -1054,6 +1151,9 @@ class VM {
       _frames.clear();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     
     if (_ip >= chunk.code.length) {
       return InterpretResult.ok;
@@ -1069,6 +1169,7 @@ class VM {
       onInstructionExecute!(_ip - 1, instruction.opcode, List.from(_stack), Map.from(_globals));
     }
     
+<<<<<<< HEAD
 =======
 
     if (_ip >= chunk.code.length) {
@@ -1091,6 +1192,8 @@ class VM {
     }
 
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     try {
       _executeInstruction(instruction);
       return InterpretResult.ok;
@@ -1141,6 +1244,7 @@ class VM {
 
   /// Define callback para execução de instrução
 <<<<<<< HEAD
+<<<<<<< HEAD
   void setOnInstructionExecute(Function(int ip, OpCode opCode, List<dynamic> stack, Map<String, dynamic> globals) callback) {
 =======
   void setOnInstructionExecute(
@@ -1153,10 +1257,14 @@ class VM {
     callback,
   ) {
 >>>>>>> origin/dev
+=======
+  void setOnInstructionExecute(Function(int ip, OpCode opCode, List<dynamic> stack, Map<String, dynamic> globals) callback) {
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     onInstructionExecute = callback;
   }
 
   /// Define callback para chamada de função
+<<<<<<< HEAD
 <<<<<<< HEAD
   void setOnFunctionCall(Function(String functionName, List<dynamic> args) callback) {
 =======
@@ -1164,15 +1272,22 @@ class VM {
     Function(String functionName, List<dynamic> args) callback,
   ) {
 >>>>>>> origin/dev
+=======
+  void setOnFunctionCall(Function(String functionName, List<dynamic> args) callback) {
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     onFunctionCall = callback;
   }
 
   /// Define callback para retorno de função
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   void setOnFunctionReturn(Function(String functionName, dynamic returnValue) callback) {
     onFunctionReturn = callback;
   }
 
+<<<<<<< HEAD
 =======
   void setOnFunctionReturn(
     Function(String functionName, dynamic returnValue) callback,
@@ -1180,6 +1295,8 @@ class VM {
     onFunctionReturn = callback;
   }
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
 }
 
 class VmRuntimeError implements Exception {

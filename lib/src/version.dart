@@ -10,10 +10,14 @@
 /// - MINOR: Funcionalidades adicionadas de forma compatível
 /// - PATCH: Correções de bugs compatíveis
 <<<<<<< HEAD
+<<<<<<< HEAD
 const String version = r'0.18.1';
 =======
 const String version = r'0.18.3';
 >>>>>>> origin/dev
+=======
+const String version = r'0.18.1';
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
 
 /// Obter versão formatada para exibição
 String get versionString => 'v$version';

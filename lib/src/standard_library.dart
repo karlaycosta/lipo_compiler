@@ -36,9 +36,12 @@ class StandardLibrary {
     _registerDataLibrary();
     _registerTypeLibrary();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     _registerLogicalOperators();
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   }
 
   /// Registra uma função nativa
@@ -328,6 +331,7 @@ class StandardLibrary {
       return DateTime.now().toString().split(' ')[0];
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
     // Alias para compatibilidade
@@ -335,6 +339,8 @@ class StandardLibrary {
       return DateTime.now().toString().split(' ')[0];
     });
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
 
     // Hora atual (HH:MM:SS)
     register('data.horaAtual', 0, (args) {
@@ -547,6 +553,7 @@ class StandardLibrary {
     });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   /// Registra operadores lógicos internos
@@ -586,4 +593,6 @@ class StandardLibrary {
     return true; // outros valores são considerados true
   }
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
 }

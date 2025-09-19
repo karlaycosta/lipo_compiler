@@ -23,6 +23,7 @@ class SwitchContext {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /// Representa uma variável local
 class Local {
@@ -42,6 +43,8 @@ class FunctionContext {
 }
 
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
 /// O CodeGenerator percorre a AST (validada semanticamente)
 /// e a traduz para um BytecodeChunk executável.
 class CodeGenerator implements AstVisitor<void> {
@@ -60,11 +63,14 @@ class CodeGenerator implements AstVisitor<void> {
   final List<SwitchContext> _switchStack = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // Contexto de função atual para variáveis locais
   FunctionContext? _currentFunction;
 
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   // Tipo de retorno da função atual (para conversões implícitas)
   TokenType? _currentFunctionReturnType;
 
@@ -959,6 +965,7 @@ class CodeGenerator implements AstVisitor<void> {
     funcGenerator._currentFunctionReturnType = stmt.returnType?.type.type;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // Configura o contexto de função para variáveis locais
     funcGenerator._currentFunction = FunctionContext(stmt.name.lexeme);
@@ -969,6 +976,8 @@ class CodeGenerator implements AstVisitor<void> {
     }
 
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     // Compila o corpo da função
     funcGenerator._generateStmt(stmt.body);
 
@@ -1094,6 +1103,7 @@ class CodeGenerator implements AstVisitor<void> {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Define a variável global
     final globalIndex = _chunk.addConstant(stmt.name.lexeme);
     _chunk.write(OpCode.defineGlobal, stmt.name.line, globalIndex);
@@ -1107,6 +1117,11 @@ class CodeGenerator implements AstVisitor<void> {
       _chunk.write(OpCode.defineGlobal, stmt.name.line, globalIndex);
     }
 >>>>>>> origin/dev
+=======
+    // Define a variável global
+    final globalIndex = _chunk.addConstant(stmt.name.lexeme);
+    _chunk.write(OpCode.defineGlobal, stmt.name.line, globalIndex);
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
   }
 
   @override
@@ -1150,6 +1165,7 @@ class CodeGenerator implements AstVisitor<void> {
   @override
   void visitMethodCallExpr(MethodCallExpr expr) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     final methodName = expr.name.lexeme;
     
@@ -1177,6 +1193,8 @@ class CodeGenerator implements AstVisitor<void> {
     
     // Se não é método de módulo, tratar como método de lista
 >>>>>>> origin/dev
+=======
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     // Gera código para o objeto
     _generateExpr(expr.object);
     
@@ -1187,9 +1205,13 @@ class CodeGenerator implements AstVisitor<void> {
     
     // Determinar qual instrução emitir baseado no método
 <<<<<<< HEAD
+<<<<<<< HEAD
     final methodName = expr.name.lexeme;
 =======
 >>>>>>> origin/dev
+=======
+    final methodName = expr.name.lexeme;
+>>>>>>> 6652597 (docs: adiciona documentação com DocMD)
     switch (methodName) {
       case 'tamanho':
         _chunk.write(OpCode.listSize, expr.name.line);
