@@ -1,25 +1,27 @@
+ <h1 align="center">
+    Documentação LiPo
+    <br />
+    <br />
+    <a href="https://docs.lipolang.dev/pages">
+     <img src="https://github.com/user-attachments/assets/d9dca834-0465-489a-a182-4d7f3ac76564" alt="LiPo" height="400">
+    </a>
+  </h1>
+</div>
+
 <p align="center">
-  <img src="web/icons/logo.png" alt="LIPO Logo" width="100" />
+  <a href="#"><img src="https://img.shields.io/badge/Mintlify-00C09B?style=flat&logo=mintlify&logoColor=white" alt="Mintlify"></a>
+  <a href="#"><img src="https://img.shields.io/badge/HTML/CSS/JS-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML/CSS/JS"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white" alt="Dart"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Portugol-FF6600?style=flat&logoColor=white" alt="Portugol"></a>
+  <a href="#"><img src="https://img.shields.io/badge/LiPo-4B0082?style=flat&logoColor=white" alt="LiPo"></a>
+  <a href="#"> <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" alt="Licença"></a>
+    <a href="#">   <img src="https://img.shields.io/badge/Status-Active-brightgreen.svg" alt="Status"  alt="Licença"></a>
 </p>
-
-<h1 align="center">LIPO</h1>
-<p align="center"><strong>Linguagem em Portugol</strong></p>
-<p align="center">Uma linguagem de programação educacional em português brasileiro</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Dart-3.8.1+-blue.svg" alt="Dart Version" />
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" />
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen.svg" alt="Status" />
-</p>
-
----
 
 ##  Introdução
-
 **LIPO** (*Linguagem em Portugol*) é uma linguagem de programação educacional desenvolvida com foco no ensino de lógica e fundamentos da programação. Utiliza palavras-chave em português brasileiro, tornando-se mais acessível e intuitiva para falantes nativos.
 
-### Por que LIPO?
-
+## Por que LIPO?
 - **Sintaxe em Português** - Aproxima o código da língua natural
 - **Educacional** - Focada no aprendizado de programação
 - **Tipagem Estática** - Maior segurança e detecção de erros
@@ -30,7 +32,6 @@
 ## Funcionalidades
 
 ###  Principais Características
-
 - **Sintaxe em Português Brasileiro** - Todas as palavras-chave utilizam português, facilitando o aprendizado
 - **Tipagem Estática** - Verificação de tipos em tempo de compilação para maior segurança
 - **Inferência de Tipos** - O compilador deduz automaticamente os tipos das variáveis
@@ -38,8 +39,9 @@
 - **Ambiente Web** - Execute diretamente no navegador
 - **Debugger Integrado** - Ferramentas de depuração avançadas
 
-###  Ferramentas Incluídas
+<br> 
 
+## Ferramentas Incluídas
 - Compilador completo
 - Máquina virtual
 - Debugger interativo
@@ -51,7 +53,6 @@
 ##  Instalação
 
 ### Pré-requisitos
-
 - **Dart SDK** 3.8.1 ou superior
 - **Git** para clonagem do repositório
 
@@ -60,14 +61,13 @@
 ####  1. Clone o repositório
 
 ```bash
-
-git clone https://github.com/karlaycosta/minidart_compiler
+git clone https://github.com/karlaycosta/lipo_compiler/
 ```
 
 ####  2. Clone repositorio 
 
 ```bash
-cd minidart_compiler
+cd lipo_compiler
 ```
 
 ####  3. Instale as dependências
@@ -76,10 +76,10 @@ cd minidart_compiler
 dart pub get
 ```
 
-#### 4. Execute o compilador
+#### 4. Execute um arquivo .mdart:
 
 ```bash
-flutter run -d chrome
+dart run bin/compile.dart exemplo.mdart
 ```
 
 #### Versão Web
@@ -91,8 +91,8 @@ dart run server.dart
 
 ```
 
----
-
+ <br>
+ 
 ##  Como Usar
 
 ### 1. Criando seu primeiro programa
@@ -114,6 +114,7 @@ se (numero > 10) {
 imprimir "Olá, ";
 imprimir nome;
 ```
+
 
 ### 2. Compilando e executando
 
@@ -140,14 +141,13 @@ Número grande: 42
 Olá, Mundo
 ```
 
----
+<br>
 
 ##  Contribuição
 
 Contribuições são muito bem-vindas! Siga estes passos:
 
 ### Como Contribuir
-
 1. **Fork** este repositório
 2. **Clone** seu fork localmente
 3. **Crie** uma branch para sua feature: `git checkout -b feature/nova-funcionalidade`
@@ -155,18 +155,18 @@ Contribuições são muito bem-vindas! Siga estes passos:
 5. **Teste** suas modificações
 6. **Abra** um Pull Request detalhado
 
-###  Diretrizes
+<br> 
 
+###  Diretrizes
 - Código limpo e bem comentado
 - Mensagens de commit claras e objetivas
 - Teste todas as funcionalidades
 - Mantenha a documentação atualizada
 - Siga os padrões de código existentes
 
----
+<br> 
 
 ##  Licença
-
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ``` bash
@@ -174,11 +174,11 @@ MIT License - você pode usar, modificar e distribuir livremente,
 mantendo a referência ao repositório original.
 ```
 
----
+<br> 
 
 ## Equipe
 
-### Desenvolvimento Principal
+#### Desenvolvimento Principal
 
 <table>
   <tr>
@@ -194,7 +194,7 @@ mantendo a referência ao repositório original.
   </tr>
 </table>
 
-### Colaboradores
+#### Colaboradores
 
 Agradecemos a todas as pessoas que contribuíram para este projeto:
 
@@ -312,10 +312,10 @@ Agradecemos a todas as pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
----
+ <br> 
 
 <p align="center">
-  <strong>Feito com ❤️ pela comunidade LIPO</strong>
+  <strong>Feito com carinho pela comunidade LIPO - Alunos de Ciência da computação - T383-8TA </strong>
   <br />
   <sub>Ajudando a democratizar o ensino de programação em português</sub>
 </p>
