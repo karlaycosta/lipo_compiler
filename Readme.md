@@ -1,9 +1,10 @@
+ 
  <h1 align="center">
     Documentação LiPo
     <br />
     <br />
     <a href="https://docs.lipolang.dev/pages">
-     <img src="https://github.com/user-attachments/assets/d9dca834-0465-489a-a182-4d7f3ac76564" alt="LiPo" height="400">
+     <img src="https://github.com/user-attachments/assets/42d53c44-92cb-41ca-9a50-58624decf753" alt="LiPo" height="400">
     </a>
   </h1>
 </div>
@@ -319,4 +320,5 @@ Agradecemos a todas as pessoas que contribuíram para este projeto:
   <br />
   <sub>Ajudando a democratizar o ensino de programação em português</sub>
 </p>
+
 
