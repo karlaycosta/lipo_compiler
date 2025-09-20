@@ -315,7 +315,8 @@ Agradecemos a todas as pessoas que contribuíram para este projeto:
  <br> 
 
 <p align="center">
-  <strong>Feito com carinho pela comunidade LIPO - Alunos de Ciência da computação - T383-8TA </strong>
+  <strong>Feito com carinho pela comunidade LIPO - Professor Dericks Karlay é Alunos de Ciência da computação - T383-8TA </strong>
   <br />
   <sub>Ajudando a democratizar o ensino de programação em português</sub>
 </p>
+
