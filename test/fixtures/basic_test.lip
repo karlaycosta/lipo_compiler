@@ -1,3 +1,0 @@
-// Arquivo de testes básicos para validação rápida
-inteiro x = 42;
-imprima paraTexto(x);

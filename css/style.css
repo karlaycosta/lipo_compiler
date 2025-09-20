@@ -1,0 +1,118 @@
+/* ================================
+   Variáveis globais
+================================ */
+:root {
+  /*  Cores */
+  --blue-dark: #0e4173;
+  --blue: #1966ad;
+  --blue-light: #2d8ad4;
+  --scrollbar-bg: transparent;
+
+  /* 📏 Tamanhos */
+  --scrollbar-size: 12px;
+  --scrollbar-radius: 6px;
+  --scrollbar-border: 3px;
+  --logo-height: 60px;
+  --logo-max-width: 200px;
+  --title-line-height: 3px;
+  --title-line-gap: 6px;
+  --title-line-width: 80px;
+
+  /*  Fontes */
+  --font-primary: 'Poppins', sans-serif;
+
+  /* ⏳ Transições */
+  --transition: 0.3s ease;
+}
+
+/* ================================
+   Scrollbar personalizada
+================================ */
+::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-dark);
+  border-radius: var(--scrollbar-radius);
+  border: var(--scrollbar-border) solid transparent;
+  background-clip: content-box;
+  transition: background-color var(--transition);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--blue-light);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue-dark) var(--scrollbar-bg);
+}
+
+/* ================================
+   Links
+================================ */
+a {
+  color: var(--blue-dark);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   Navbar / Logo
+================================ */
+.nav-logo {
+  height: var(--logo-height);
+  max-width: var(--logo-max-width);
+  object-fit: contain;
+}
+
+.navbar button {
+  font-weight: bold !important;
+  color: var(--blue-dark) !important;
+  border: 2px solid var(--blue-dark) !important;
+  background-color: transparent !important;
+}
+
+/* ================================
+   Títulos (h1 e h2) com traço degradê
+================================ */
+h1, h2 {
+  font-weight: bold;
+  font-family: var(--font-primary);
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--title-line-gap);
+}
+
+h1::after,
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: var(--title-line-height);
+  width: var(--title-line-width);
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--blue-dark),
+    var(--blue),
+    var(--blue-light)
+  );
+}
+ 

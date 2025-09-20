@@ -1,4 +1,0 @@
-// Teste apenas comparação
-inteiro dia = 3;
-var comp = (dia >= 6);
-imprima "Comparação: " + paraTexto(comp);

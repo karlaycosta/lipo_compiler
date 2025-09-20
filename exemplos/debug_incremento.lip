@@ -1,7 +1,0 @@
-vazio testeIncremento() {
-    inteiro contador = 0;
-    imprima "Contador inicial: " + paraTexto(contador);
-    contador++;
-    imprima "Contador após ++: " + paraTexto(contador);
-}
-testeIncremento();

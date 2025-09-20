@@ -1,5 +1,0 @@
-// Teste mínimo
-inteiro a = 3;
-inteiro b = 6;
-var resultado = (a >= b);
-imprima "Resultado: " + paraTexto(resultado);
