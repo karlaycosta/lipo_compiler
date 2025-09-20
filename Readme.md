@@ -1,6 +1,6 @@
  
  <h1 align="center">
-    Documentação LiPo
+     LiPo
     <br />
     <br />
     <a href="https://docs.lipolang.dev/pages">
@@ -320,5 +320,6 @@ Agradecemos a todas as pessoas que contribuíram para este projeto:
   <br />
   <sub>Ajudando a democratizar o ensino de programação em português</sub>
 </p>
+
 
 
