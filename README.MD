@@ -1,12 +1,13 @@
  
   <h1 align="center">
-    Documentação LiPo
+       Documentação LiPo
     <br />
     <br />
     <a href="https://docs.lipolang.dev/pages">
-     <img src="https://github.com/user-attachments/assets/d9dca834-0465-489a-a182-4d7f3ac76564" alt="LiPo" height="400">
+     <img src="https://github.com/user-attachments/assets/dd2fc824-4dcf-4205-a605-b50416f45e38" alt="LiPo" height="400">
     </a>
-  </h1>
+  </h1 >
+
 </div>
 
 <p align="center">
@@ -80,6 +81,8 @@ Você pode acessar a documentação online em:  [Documentação do Lipo](https:/
 
 ###  Instalação Rápida
 
+>  **Pré-requisito:** Por favor instale **[Node.js](https://nodejs.org/en/download)** antes de prosseguir.
+
 ####  1. Clone o repositório
 
 ```bash
@@ -93,16 +96,18 @@ git clone https://github.com/StellaKarolinaNunes/mintlify-docs
 cd mintlify-docs
 ```
 
-####  3. Instale dependências:
+####  3. Instale  a CLI.:
 
 ```bash
-npm install
+npm i -g mint
 ```
+
+> **Alternativamente, se você não quiser instalar a CLI globalmente**, você pode executar um script único: ```npx mint dev```
 
 #### 4. Rode o servidor local:
 
 ```bash
-npm run dev
+mint dev
 ```
 
 #### 5. Abra o navegador e acesse:
